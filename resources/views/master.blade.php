@@ -84,7 +84,7 @@
 
 
 
-      <title>CAMINATAS ECOLÓGICAS</title>
+      <title>CURSOS DE NATACIÓN - CASB</title>
 
   </head>
 
@@ -124,7 +124,7 @@
 
               <li><a href="registro" id="a-registro">Registrarse</a></li>
 
-              <!--<li><a href="descarga" id="a-descarga">Descargar Carnet</a></li>-->
+              <li><a href="descarga" id="a-descarga">Comprobar Pre-Inscripción</a></li>
 
               <!--<li><a href="login" id="a-login" >Iniciar sesion</a></li>-->
 
@@ -160,7 +160,7 @@
 
       </br></br>
 
-      <div class="container">
+      <<div class="container">
 
           <div class="page-header" id="banner">
 
@@ -168,9 +168,9 @@
 
               <div class="col-lg-8 col-md-7 col-sm-6">
 
-                <h1>IDRD</h1>
+                <h1><font size="6" face="Comic Sans MS,arial,verdana">IDRD</font></h1>
 
-                <center<p class="lead"><h1>CAMINATAS ECOLÓGICAS</h1></p>
+                <center<p class="lead"><h1><font size="5" face="Comic Sans MS,arial,verdana">ESCUELA DEPORTIVA DE NATACIÓN COMPLEJO ACUÁTICO SIMÓN BOLIVAR – IDRD 2017</font></h1></p>
 
               </div>
 

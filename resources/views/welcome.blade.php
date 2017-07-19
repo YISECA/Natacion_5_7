@@ -20,7 +20,10 @@
 
                     <div class="freebirdFormviewerViewHeaderTitleRow">
 
-                        <div class="freebirdFormviewerViewHeaderTitle" dir="auto" role="heading" aria-level="1"><h3> PARQUE NACIONAL – PICO DEL AGUILA Domingo 16 de julio de 2017</h3></div>
+                        <div class="freebirdFormviewerViewHeaderTitleRow">
+
+                        <p><font size="5" face="Comic Sans MS,arial,verdana">FORMULARIO DE PRE-INSCRIPCIÓN NIÑOS DE 5 A 7 AÑOS </font></p>
+                        <p><font size="4" face="Comic Sans MS,arial,verdana" color="#1995dc">Pre-Inscripciones el día 20 de junio desde las 10.00 a.m. o hasta agotar cupos disponibles </font></p>
 
                     </div>
 <br>
@@ -32,21 +35,21 @@
 
                                 <li class="elmnt-one">                                 
 
-                                        <div class="wrap"><img src="public/Img/pico.jpg"  height="400">
+                                        <div class="wrap"><img src="public/Img/curso.jpg"  height="400">
 
                                         </div>                                   
                                 </li>
 
                                <li class="elmnt-two">
                                     
-                                        <div class="wrap"><img src="public/Img/pico1.jpg"  height="400">
+                                        <div class="wrap"><img src="public/Img/curso1.jpg"  height="400">
 
                                         </div>                                 
                                 </li>
 
                                  <li class="elmnt-three">
                                     
-                                        <div class="wrap"><img src="public/Img/pico2.jpg"  height="400">
+                                        <div class="wrap"><img src="public/Img/curso2.jpg"  height="400">
 
                                         </div>                                 
                                 </li>
@@ -71,31 +74,17 @@
                     </div>
 
                     <script src="public/Js/jquery.sldr.js"></script>
-
                     <div class="freebirdFormviewerViewHeaderDescription" dir="auto">
 
-                        <h2>Ubicación</h2>
+                      <p style="font-size: 11pt" align="justify">Fecha Inicio Ciclo 4-2017: <strong>22 de julio</strong></font></p>
+                      <p style="font-size: 11pt" align="justify">Fecha Finalización ciclo 4-2017:<strong> 20 de agosto</strong></font></p>
+                        <br>
 
-                        <p align="justify" style="font-size: 11pt; line-height: 25px">El parque Nacional Enrique Olaya Herrera está ubicado en la localidad de Santa Fe, cuenta con tres sectores: Sector cultural, Sector deportivo y recreativo y la parte alta de montaña donde se encuentran varios senderos subiendo por carabineros tanques del silencio y llegando a pico del águila.</p>
+                        <p style="line-height: 27px; font-size: 11pt" align="justify">Este Primer momento o tramite  se realiza a través de este medio electrónico, para el segundo momento o Formalización de la Inscripción debe dirigirse a la oficina de coordinación del Complejo Acuático Simón Bolivar, los días 20, 21 o 22 de junio de 2017 en los horario de 8:00 a.m a 12:00 m. y de 2:00 a 3:00 p.m., con el objeto de entregar los documentos solicitados por el IDRD y de esta manera Formalizar su Inscripción. <strong>si NO realiza la entrega de documentos y consignación o pago </strong> se anulara la Pre-Inscripción y deberá realizarla nuevamente para el siguiente ciclo.</p>
+                        <br>
+                        <p style="line-height: 27px; font-size: 11pt" align="justify"><strong>IMPORTANTE:</strong> Tenga en cuenta que solo debe realizar el pago (consignación) del curso cuando esta Pre-inscripción sea aceptada <strong>(el sistema automáticamente le informa de la Aceptación de la Pre-inscripción al finalizar este proceso)</strong> y  solo debe inscribir al alumno nuevo una sola y única vez, durante el proceso de cada ciclo, con el objeto de evitar duplicidad en la información y de esta forma excluir de un cupo a otro usuario interesado. </p>
 
-                        <h2>Descripción del recorrido </h2>
 
-                        <p align="justify" style="font-size: 11pt; line-height: 25px">El recorrido da inicio en la torre del reloj del parque Nacional, donde el Guía de caminatas hace un calentamiento previo y socializa las indicaciones para el recorrido. Continúa por la parte alta del subiendo por carabineros tanques del silencio y llegando a pico del águila; Pasando por excelentes miradores y disfrutando de toda una reserva de vida de nuestra ciudad.</p>
-
-                        <!--<h2>Durante el recorrido se visitaran los siguientes atractivos:</h2>-->
-                        <!--<ul class="ul_inicio">
-                            <font style="font-size: 11pt; line-height: 25px;">
-                            <li>Barrio el triunfo </li>
-                            <li>Administración del parque </li>
-                            <li>Parque de la tierra </li>
-                            <li>Humedales artificiales </li>
-                            <li>Centro de amistad con tierra  (C.A.T)</li>
-                            <li>Alto de la cruz </li>
-                            <li>Mirador del relleno sanitario de Doña Juana </li>
-                            <li>Refugio</li>
-                            <li>Mirador de juan Rey </li>
-                            </font>
-                        </ul>-->
                         <br>
 
                         <font size="4"><center><table width="1000">
@@ -281,38 +270,17 @@
 
                         </table></center></font>
 
-                        <h2>Recomendaciones</h2>
+                        <h4>Recomendaciones</h4>
 
-                        <ul class="ul_inicio">
-
-                            <font  style="font-size: 11pt; line-height: 25px">
-
-                                <li>Llevar ropa cómoda</li>
-                            
-                                <li>Llevar bloqueador solar</li>
-
-                                <li>Hidratación</li>
-
-                                <li>Calzado cómodo</li>
-
-                                <li>Llevar carné de la eps</li>
-
-                                <li>Refrigerio.</li>
-
-                                <li>Medicamentos personales </li>
-
-                                <li>No llevar mascotas </li>
-
-                                <li>Abstenerse de participar mujeres en estado de embarazo, personas que tengan problemas cardiacos y de rodillas y que sufran de asma y/o vértigo</li>
-
-                                <li><ins>Abstenerse de asistir si no se encuentra inscrito</ins></li>
-
-                                <!--<li><strong>Llevar la tarjeta de tu llave cargada, se debe regresar en el SITP</strong></li>-->
-                            </font>
-
+                        
+<p style="line-height: 22px; font-size: 11pt;color:#1995dc" align="justify">"Recuerde que el horario seleccionado por usted <strong>NO PODRA SER MODIFICADO,</strong> teniendo en cuenta la programación establecida por el IDRD y la cantidad de cupos habilitados por horario, ya que estos son limitados con el fin de ofrecer un buen servicio en el desarrollo técnico de la escuela deportiva."</p>
+<br>
+<p style="line-height: 27px; font-size: 11pt" align="justify"><strong>"ACEPTO TÉRMINOS Y CONDICIONES DE LA ESCUELA DE NATACIÓN DEL COMPLEJO ACUÁTICO SIMÓN BOLÍVAR - IDRD"</strong> </p>
+<br>
+<p style="line-height: 20px; font-size: 11pt" align="justify"><strong>* todos los campos son obligatorios y Recuerde que al Finalizar este proceso y ENVIAR LOS DATOS DE INSCRIPCIÓN el sistema le informa automáticamente si su pre-inscripción fue aceptada</strong> </p>
                             <br>
 
-                        </ul> <a class="btn btn-info" href="registro">Registrarse</a> </div>
+                        </ul> <a class="btn btn-info" href="registro">Registrarse</a> <a class="btn btn-info" href="algo">algo</a> </div>
 
                 </div>
 

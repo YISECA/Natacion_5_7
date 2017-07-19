@@ -22,56 +22,40 @@
 
 */
 
-
+Route::any('/','FormController@index');
+Route::any('registro','FormController@index');
 
 Route::get('/', function () {                
-
     return view('welcome');
-
 });
 
-
-
-Route::get('registro', function () {                
-
-    return view('form');
-
+Route::get('algo', function () {                
+    return view('login');
 });
-
 
 
 Route::get('descarga', function () {                
-
     return view('descarga');
-
 });
 
 
 
 Route::get('carnet_prueba', function () {                
-
     return view('carnet');
-
 });
 
 
 
 Route::get('login', function () {                
-
     return view('login');
-
 });
 
 
 
 Route::get('cerrar', function () {      
-
 	session_start();
-
 	session_destroy();
-
     return redirect('/');
-
 });
 
 

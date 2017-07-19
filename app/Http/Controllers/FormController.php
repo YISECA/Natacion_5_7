@@ -10,6 +10,8 @@ use Validator;
 use Session;
 use App\Form;
 use Idrd\Usuarios\Repo\Acceso;
+use App\Localidad;
+use App\Horario;
 use Mail;
 
 
@@ -18,6 +20,16 @@ class FormController extends BaseController
 
 {
     var $url;
+
+      public function index()
+    {
+
+      $localidad = Localidad::all();
+      $horarios = Horario::all();
+
+      return view('form',["localidades"=>$localidad, "horarioss"=>$horarios]);
+    }
+
     private function cifrar($M)
 
     {   
@@ -103,65 +115,83 @@ class FormController extends BaseController
     }
 
 
-    public function insertar(Request $request)
+//insertar
+
+public function insertar(Request $request)
+
     {
 
-      $post = $request->input();
-      $usuario = Form::where('cedula', $request->input('cedula'))->first(); 
-      if (!empty($usuario)) { return view('error',['error' => 'Este usuario ya fue registrado!'] ); exit(); }
-      $formulario = new Form([]);
+     $post = $request->input();
+     $usuario = Form::where('cedula', $request->input('cedula'))->first(); 
+     if (!empty($usuario)) { return view('error',['error' => 'Este usuario ya fue registrado!'] ); exit(); 
+    }
+     $formulario = new Form([]);
 
-        //envio de correo
+      //envio de correo
 
-       if($this->inscritos()<=40)
-       {
+     if($this->inscritos()<=800)
 
-        $this->store($formulario, $request->input());
-        Mail::send('email', ['user' => $request->input('mail')], function ($m) use ($request) 
+     {
+
+        $formulario = $this->store($formulario, $request);
+
+        //$this->store($formulario, $request->input());
+        
+        Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
         {
-
-            $m->from('no-reply@idrd.gov.co', 'Registro Exitoso a esta Caminata');
-            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso a esta caminata!');
-
+            $m->from('no-reply@idrd.gov.co', 'Registro Exitoso a la Ecotravesía Cerros Orientales');
+            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso a la Ecotravesía cerros orientales!');
         });
 
       }else{
-
         return view('error', ['error' => 'Lo sentimos el limite de inscritos fue superado!']);
       }
-
-        return view('error', ['error' => 'Registro insertado!']);
+          return view('error', ['error' => 'SU PRE-INSCRIPCION FUE ACEPTADA Recuerde Imprimir el comprobante de Pre-Inscripción y Formalizar la Inscripción (entrega de pago y documentos) del niño o niña en la Coordinación de la Escuela del CASB-IDRD el 20, 21 o 22 de junio']);
     }
 
 
+    //fin insertar
+   
 // conteo de la tabla
 
-    private function inscritos()
-    {
+    private function inscritos(){
 
       $cant = Form::count('id');
-      return $cant+1;
-    }
 
+      return $cant+1;
+
+    }
 
     private function store($formulario, $input)
 
     {
-
+        $formulario['nombre_acudiente'] = $input['nombre_acudiente'];
+        $formulario['cedula_acudiente'] = $input['cedula_acudiente'];
+        $formulario['ocupacion'] = $input['ocupacion'];
+        $formulario['mail'] = $input['mail'];
+        $formulario['direccion'] = $input['direccion'];
+        $formulario['telefono'] = $input['telefono'];
+        $formulario['localidad'] = $input['localidad'];
+        $formulario['nombre_nino'] = $input['nombre_nino'];
+        $formulario['apellido_nino'] = $input['apellido_nino'];
         $formulario['cedula'] = $input['cedula'];
-        $formulario['tipo_documento'] = $input['tipo_documento'];
-        $formulario['primer_nombre'] = $input['primer_nombre'];
-        $formulario['segundo_nombre'] = $input['segundo_nombre'];
-        $formulario['primer_apellido'] = $input['primer_apellido'];
-        $formulario['segundo_apellido'] = $input['segundo_apellido'];
         $formulario['genero'] = $input['genero'];
         $formulario['fecha_nacimiento'] = $input['fecha_nacimiento'];
-        $formulario['mail'] = $input['mail'];
-        $formulario['celular'] = $input['celular'];
+        $formulario['edad'] = $input['edad'];
+        $formulario['direccion_nino'] = $input['direccion_nino'];
+        $formulario['telefono_nino'] = $input['telefono_nino'];
         $formulario['eps'] = $input['eps'];
+        $formulario['institucion'] = $input['institucion'];
+        $formulario['sector_colegio'] = $input['sector_colegio'];
+        $formulario['curso'] = $input['curso'];
+        $formulario['horario'] = $input['horario'];
+        $formulario['nivel_curso'] = $input['nivel_curso'];
         $formulario->save();
+
         return $formulario;
+
+        
+
     }
 
 }
-
