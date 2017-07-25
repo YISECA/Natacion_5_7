@@ -124,7 +124,7 @@
 
               <li><a href="registro" id="a-registro">Registrarse</a></li>
 
-              <li><a href="descarga" id="a-descarga">Comprobar Pre-Inscripción</a></li>
+              <li><a href="descarga" id="a-descarga">Descargar Formato de Pre-Inscripción</a></li>
 
               <!--<li><a href="login" id="a-login" >Iniciar sesion</a></li>-->
 

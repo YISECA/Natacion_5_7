@@ -12,6 +12,7 @@ use App\Form;
 use Idrd\Usuarios\Repo\Acceso;
 use App\Localidad;
 use App\Horario;
+use App\Cupo;
 use Mail;
 
 
@@ -54,43 +55,59 @@ class FormController extends BaseController
     public function listar_datos()
     {
 
-      $acceso = Form::whereYear('created_at', '=', date('Y'))->get(); 
+      /*$acceso = Form::where('ciclo','=',"CURSO_5")->whereYear('created_at', '=', date('Y'))->get(); */
+     $acceso = Form::where('ciclo',5)->whereYear('created_at', '=', date('Y'))->get();
 
-      $tabla='<table id="lista">
 
+       $tabla='<table id="lista">
+<center><h3><font size="5" face="Comic Sans MS,arial,verdana"> CONSULTA NIÑOS PRE-INSCRITOS AL CURSO DE NATACIÓN EDADES DE 5 A 7 AÑOS</font></h3></center><br>
+<h4>total de niños inscritos: '.$acceso->count().'</h4><br>
         <thead>
            <tr>
-             <th style="text-transform: capitalize;">id</th>
-             <th style="text-transform: capitalize;">cedula</th>
-             <th style="text-transform: capitalize;">tipo_documento</th>
-             <th style="text-transform: capitalize;">primer_nombre</th>
-             <th style="text-transform: capitalize;">segundo_nombre</th>
-             <th style="text-transform: capitalize;">primer_apellido</th>
-             <th style="text-transform: capitalize;">segundo_apellido</th>
-             <th style="text-transform: capitalize;">genero</th>
-             <th style="text-transform: capitalize;">fecha_nacimiento</th>
-             <th style="text-transform: capitalize;">mail</th>
-             <th style="text-transform: capitalize;">celular</th>
-             <th style="text-transform: capitalize;">eps</th>          
-          </tr>
+             <th style="text-transform: capitalize;">Código</th>
+             <th style="text-transform: capitalize;">Horario de inscripción</th>
+             <th style="text-transform: capitalize;">Nombre del niño(a)</th>
+             <th style="text-transform: capitalize;">Edad</th>
+             <th style="text-transform: capitalize;">Género</th>
+             <th style="text-transform: capitalize;">Documento</th>
+             <th style="text-transform: capitalize;">Dirección</th>
+             <th style="text-transform: capitalize;">Eps</th>
+             <th style="text-transform: capitalize;">Nombre del acudiente</th>
+             <th style="text-transform: capitalize;">Teléfonos</th>
+             <th style="text-transform: capitalize;">Mail</th>
+             <th style="text-transform: capitalize;">Fecha de nacimiento</th>
+             <th style="text-transform: capitalize;">Documento del acudiente</th>
+             <th style="text-transform: capitalize;">Ocupación del acudiente</th>
+             <th style="text-transform: capitalize;">Localidad</th>
+             <th style="text-transform: capitalize;">Colegio</th>
+             <th style="text-transform: capitalize;">Sector del Colegio</th>
+             <th style="text-transform: capitalize;">¿Clases o cursos?</th>          
+            </tr>
         </thead>
+
         <tbody id="tabla">';
 
       foreach ($acceso as $key => $value)
       {
 
        $tabla.='<tr><td>'.$value->id.'</td>';
-       $tabla.='<td>'.$value->cedula.'</td>';
-       $tabla.='<td>'.$value->tipo_documento.'</td>';
-       $tabla.='<td>'.$value->primer_nombre.'</td>';
-       $tabla.='<td>'.$value->segundo_nombre.'</td>';
-       $tabla.='<td>'.$value->primer_apellido.'</td>';
-       $tabla.='<td>'.$value->segundo_apellido.'</td>';
+       $tabla.='<td>'.$value->horarioss['horarios'].'</td>';
+       $tabla.='<td>'.$value->nombre_nino.' '.$value->apellido_nino.'</td>';
+       $tabla.='<td>'.$value->edad.' años</td>';
        $tabla.='<td>'.$value->genero.'</td>';
-       $tabla.='<td>'.$value->fecha_nacimiento.'</td>';
+       $tabla.='<td>'.$value->cedula.'</td>';
+       $tabla.='<td>'.$value->direccion_nino.'</td>';
+       $tabla.='<td>'.$value->eps.'</td>';
+       $tabla.='<td>'.$value->nombre_acudiente.'</td>';
+       $tabla.='<td>'.$value->telefono.' - '.$value->telefono_nino.'</td>';
        $tabla.='<td>'.$value->mail.'</td>';
-       $tabla.='<td>'.$value->celular.'</td>';
-       $tabla.='<td>'.$value->eps.'</td></tr>';
+       $tabla.='<td>'.$value->fecha_nacimiento.'</td>';
+       $tabla.='<td>'.$value->cedula_acudiente.'</td>';
+       $tabla.='<td>'.$value->ocupacion.'</td>';
+       $tabla.='<td>'.$value->localidades['localidad'].'</td>';
+       $tabla.='<td>'.$value->institucion.'</td>';
+       $tabla.='<td>'.$value->sector_colegio.'</td>';
+       $tabla.='<td>'.$value->curso.'</td></tr>';
       }
 
       $tabla.='</tbody></table>';
@@ -129,7 +146,7 @@ public function insertar(Request $request)
 
       //envio de correo
 
-     if($this->inscritos()<=800)
+     if($this->inscritos($request))
 
      {
 
@@ -146,7 +163,7 @@ public function insertar(Request $request)
       }else{
         return view('error', ['error' => 'Lo sentimos el limite de inscritos fue superado!']);
       }
-          return view('error', ['error' => 'SU PRE-INSCRIPCION FUE ACEPTADA Recuerde Imprimir el comprobante de Pre-Inscripción y Formalizar la Inscripción (entrega de pago y documentos) del niño o niña en la Coordinación de la Escuela del CASB-IDRD el 20, 21 o 22 de junio']);
+          return view('error', ['error' => 'SU PRE-INSCRIPCION FUE ACEPTADA Recuerde Imprimir el comprobante de Pre-Inscripción (Descargar Formato de Pre-Inscripción) y Formalizar la Inscripción (entrega de pago y documentos) del niño o niña en la Coordinación de la Escuela del CASB-IDRD el 20, 21 o 22 de junio']);
     }
 
 
@@ -154,11 +171,15 @@ public function insertar(Request $request)
    
 // conteo de la tabla
 
-    private function inscritos(){
+    private function inscritos($request)
+    {
 
-      $cant = Form::count('id');
 
-      return $cant+1;
+      $cupo = Cupo::where(['id_horario' => $request['horario'],'id_ciclo'=> $request['ciclo'] ])->first()['cupo'];
+      $cant = Form::where(['horario' => $request['horario'],'ciclo'=> $request['ciclo'] ])->count('id');
+
+      if($cant>=$cupo){return false;}
+      if($cant<$cupo){return true;}
 
     }
 
@@ -185,7 +206,7 @@ public function insertar(Request $request)
         $formulario['sector_colegio'] = $input['sector_colegio'];
         $formulario['curso'] = $input['curso'];
         $formulario['horario'] = $input['horario'];
-        $formulario['nivel_curso'] = $input['nivel_curso'];
+        $formulario['ciclo'] = $input['ciclo'];
         $formulario->save();
 
         return $formulario;

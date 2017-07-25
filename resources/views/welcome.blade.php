@@ -35,14 +35,14 @@
 
                                 <li class="elmnt-one">                                 
 
-                                        <div class="wrap"><img src="public/Img/curso.jpg"  height="400">
+                                        <div class="wrap"><img src="public/Img/curso4.jpg"  height="400">
 
                                         </div>                                   
                                 </li>
 
                                <li class="elmnt-two">
                                     
-                                        <div class="wrap"><img src="public/Img/curso1.jpg"  height="400">
+                                        <div class="wrap"><img src="public/Img/curso3.jpg"  height="400">
 
                                         </div>                                 
                                 </li>
@@ -280,7 +280,7 @@
 <p style="line-height: 20px; font-size: 11pt" align="justify"><strong>* todos los campos son obligatorios y Recuerde que al Finalizar este proceso y ENVIAR LOS DATOS DE INSCRIPCIÓN el sistema le informa automáticamente si su pre-inscripción fue aceptada</strong> </p>
                             <br>
 
-                        </ul> <a class="btn btn-info" href="registro">Registrarse</a> <a class="btn btn-info" href="algo">algo</a> </div>
+                        </ul> <a class="btn btn-info" href="registro">Registrarse</a></div>
 
                 </div>
 
