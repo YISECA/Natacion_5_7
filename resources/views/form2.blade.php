@@ -4,7 +4,7 @@
 <div class="panel panel-default">
    <form method="POST" action="insertar" id="form_gen" enctype="multipart/form-data">
       <div class="panel-body">
-         <p align="center" style="font-size: 20px">FORMULARIO DE PRE-INSCRIPCIÓN NIÑOS DE 5 A 7 AÑOS</p>
+         <p align="center" style="font-size: 20px">FORMULARIO DE PRE-INSCRIPCIÓN NIÑOS DE 8 A 12 AÑOS</p>
          
          <p align="center"><font size="3"color="#1995dc">Pre-Inscripciones el día 20 de junio desde las 10.00 a.m. o    hasta agotar cupos disponibles </font></p><br>
          <p style="line-height: 27px; font-size: 11pt" align="justify">Este Primer momento o tramite  se realiza a través de este medio electrónico, para el segundo momento o Formalización de la Inscripción debe dirigirse a la oficina de coordinación del Complejo Acuático Simón Bolivar, los días 20, 21 o 22 de junio de 2017 en los horario de 8:00 a.m a 12:00 m. y de 2:00 a 3:00 p.m., con el objeto de entregar los documentos solicitados por el IDRD y de esta manera Formalizar su Inscripción. <strong>si NO realiza la entrega de documentos y consignación o pago </strong> se anulara la Pre-Inscripción y deberá realizarla nuevamente para el siguiente ciclo.</p><br>
@@ -141,6 +141,7 @@
          
          <div class="col-xs-6"><label > si selecciona <font color="#1995dc" size="3">SI</font> se realizará evaluación de Habilidades en el agua, y se ubicara en el mismo horario u otro disponible según resultado y cupos para el nivel evaluado</label></div>
       </div>
+      <!-- ciclo del curso-->
       <div class="col-xs-6"><input type="hidden" name="ciclo" id="ciclo" value="5"></div>
    </div>
 </div>
@@ -167,7 +168,7 @@
       <div class="freebirdFormviewerViewItemsItemItemheader">
          <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
             <div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" id="i1" role="heading" aria-level="2" aria-describedby="i.desc.131124881">Términos de inscripción <span class="freebirdFormviewerViewItemsItemRequiredAsterisk" aria-hidden="true">*</span><br><br><br><br><br></div>
-            <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.131124881" dir="auto">He leído el reglamento y  los requisitos  y acepto términos y condiciones y de la ESCUELA DE NATACIÓN DEL COMPLEJO ACUÁTICO SIMÓN BOLÍVAR - IDRD </div>
+            <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.131124881" dir="auto">ACEPTO TÉRMINOS Y CONDICIONES DE LA ESCUELA DE NATACIÓN DEL COMPLEJO ACUÁTICO SIMÓN BOLÍVAR - IDRD</div>
          </div>
       </div>
       <div jsname="JNdkSc" role="group" aria-labelledby="i1" aria-describedby="i.desc.131124881 i.err.131124881 i.req.131124881" class="">
@@ -194,6 +195,8 @@
    <div class="freebirdFormviewerViewNavigationButtonsAndProgress">
    
       <div class="freebirdFormviewerViewNavigationButtons">
+
+
          <input class="enviar" type="submit" value="Enviar">
       </div>
      
@@ -201,6 +204,6 @@
    <div class="freebirdFormviewerViewNavigationPasswordWarning">.</div>
 </div>
 </form>
-<script type="text/javascript" src="public/Js/form.js" ></script>
+<script type="text/javascript" src="public/Js/form2.js" ></script>
 </div>
 @stop

@@ -48,7 +48,7 @@ img{
     </tr>
     <tr>
       <td colspan="2">Edad Cumplida:</td>
-      <td colspan="2"><strong>{{$formulario->edad}}</strong></td>
+      <td colspan="2"><strong>{{$formulario->edad}}&nbsp;años</strong></td>
      </tr>
      <tr> 
       <td colspan="2">Dirección Residencia:</td>
@@ -76,7 +76,7 @@ img{
      </tr>
      <tr> 
       <td colspan="2">Horario:</td>
-      <td colspan="2"><strong>{{$formulario->horario}}</strong></td>
+      <td colspan="2"><strong>{{$formulario->horarioss->horarios}}</strong></td>
     </tr>
     <tr>
       <td colspan="2" align="center">&nbsp;</td>

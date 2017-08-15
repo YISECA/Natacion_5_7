@@ -22,11 +22,13 @@ class PdfController extends BaseController {
 
       $id = $post['id'];
 
-      $usuario = Form::where('cedula', $id)->first();   
+
+      $usuario = Form::with('localidades','horarioss')->where('cedula', $id)->first();   
 
       if (empty($usuario)) { return view('error',['error' => 'No existe este usuario'] ); exit(); }
 
-     /*return view('carnet', ['formulario' => $usuario]);
+    
+      /*return view('carnet', ['formulario' => $usuario]);
 
       exit();*/
 

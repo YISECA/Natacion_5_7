@@ -102,7 +102,7 @@
 
           <div class="navbar-header">
 
-            <a href="#" class="navbar-brand">SIM</a>
+            <!--<a href="#" class="navbar-brand">SIM</a>-->
 
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
 
@@ -120,9 +120,11 @@
 
             <ul class="nav navbar-nav">
 
-               <li><a href="cerrar" id="a-registro">Inicio</a></li>
+               <li><a href="cerrar" id="a-registro">Bienvenidos</a></li>
 
-              <li><a href="registro" id="a-registro">Registrarse</a></li>
+              <li><a href="recomendaciones" id="a-registro">Reglamento y Requisitos</a></li>
+
+              <!--<li><a href="registro" id="a-registro">Registrarse</a></li>-->
 
               <li><a href="descarga" id="a-descarga">Descargar Formato de Pre-Inscripción</a></li>
 
@@ -168,9 +170,9 @@
 
               <div class="col-lg-8 col-md-7 col-sm-6">
 
-                <h1><font size="6" face="Comic Sans MS,arial,verdana">IDRD</font></h1>
+                <h1><font size="5" face="Comic Sans MS,arial,verdana">BIENVENIDOS</font></h1>
 
-                <center<p class="lead"><h1><font size="5" face="Comic Sans MS,arial,verdana">ESCUELA DEPORTIVA DE NATACIÓN COMPLEJO ACUÁTICO SIMÓN BOLIVAR – IDRD 2017</font></h1></p>
+                <center<p class="lead"><h1><font size="4" face="Comic Sans MS,arial,verdana">ESCUELA DEPORTIVA DE NATACIÓN COMPLEJO ACUÁTICO SIMÓN BOLIVAR – IDRD 2017</font></h1></p>
 
               </div>
 
@@ -178,7 +180,7 @@
 
                  <div align="right"> 
 
-                    <img src="public/Img/IDRD.JPG" width="50%" heigth="40%"/>
+                    <img src="public/Img/IDRD.JPG" width="40%" heigth="30%"/>
 
                  </div>                    
 

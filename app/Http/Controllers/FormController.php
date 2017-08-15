@@ -26,9 +26,18 @@ class FormController extends BaseController
     {
 
       $localidad = Localidad::all();
-      $horarios = Horario::all();
+      $horarios = Horario::where(['tipo'=>1])->get();
 
       return view('form',["localidades"=>$localidad, "horarioss"=>$horarios]);
+    }
+
+      public function index_b()
+    {
+
+      $localidad = Localidad::all();
+      $horarios = Horario::where(['tipo'=>2])->get();
+
+      return view('form2',["localidades"=>$localidad, "horarioss"=>$horarios]);
     }
 
     private function cifrar($M)
@@ -60,7 +69,7 @@ class FormController extends BaseController
 
 
        $tabla='<table id="lista">
-<center><h3><font size="5" face="Comic Sans MS,arial,verdana"> CONSULTA NIÑOS PRE-INSCRITOS AL CURSO DE NATACIÓN EDADES DE 5 A 7 AÑOS</font></h3></center><br>
+<center><h3><font size="5" face="Comic Sans MS,arial,verdana"> CONSULTA NIÑOS PRE-INSCRITOS AL CURSO DE NATACIÓN TODAS LAS EDADES EN EL CICLO 5 -2017</font></h3></center><br>
 <h4>total de niños inscritos: '.$acceso->count().'</h4><br>
         <thead>
            <tr>
@@ -156,12 +165,12 @@ public function insertar(Request $request)
         
         Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
         {
-            $m->from('no-reply@idrd.gov.co', 'Registro Exitoso a la Ecotravesía Cerros Orientales');
-            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso a la Ecotravesía cerros orientales!');
+            $m->from('no-reply@idrd.gov.co', 'Preinscripción aceptada al curso de natación en el complejo acuático Simón Bolivar ');
+            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Preinscripción aceptada al curso de natación en el complejo acuático Simón Bolivar');
         });
 
       }else{
-        return view('error', ['error' => 'Lo sentimos el limite de inscritos fue superado!']);
+        return view('error', ['error' => 'Lo sentimos ya NO hay cupos en este horario!']);
       }
           return view('error', ['error' => 'SU PRE-INSCRIPCION FUE ACEPTADA Recuerde Imprimir el comprobante de Pre-Inscripción (Descargar Formato de Pre-Inscripción) y Formalizar la Inscripción (entrega de pago y documentos) del niño o niña en la Coordinación de la Escuela del CASB-IDRD el 20, 21 o 22 de junio']);
     }

@@ -1,293 +1,71 @@
-@extends('master')                              
-
-@section('content')         
-
+@extends('master')
+@section('content')
 <link rel="stylesheet" type="text/css" href="public/Css/form.css">
-
 <link rel="stylesheet" type="text/css" href="public/Css/slider_styles.css">
-
 <section id="page1">
-
     <div class="panel panel-default">
-
-        <div class="panel-heading">Inicio</div>
-
+        <div class="panel-heading"><p align="center"><font style="font-size: 14pt">Fecha Inicio Ciclo 4-2017: <strong>22 de julio</strong></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font style="font-size: 14pt">Fecha Finalización ciclo 4-2017:<strong> 20 de agosto</strong></font></p></div>
         <div class="panel-body">
-
             <div class="freebirdFormviewerViewFormContent ">
-
                 <div class="freebirdFormviewerViewHeaderHeader">
-
                     <div class="freebirdFormviewerViewHeaderTitleRow">
-
-                        <div class="freebirdFormviewerViewHeaderTitleRow">
-
-                        <p><font size="5" face="Comic Sans MS,arial,verdana">FORMULARIO DE PRE-INSCRIPCIÓN NIÑOS DE 5 A 7 AÑOS </font></p>
-                        <p><font size="4" face="Comic Sans MS,arial,verdana" color="#1995dc">Pre-Inscripciones el día 20 de junio desde las 10.00 a.m. o hasta agotar cupos disponibles </font></p>
-
-                    </div>
-<br>
-                    <div class="stage">
-
-                        <div id="SLDR-ONE" class="sldr">
-
-                            <ul class="wrp animate">
-
-                                <li class="elmnt-one">                                 
-
+                        <br>
+                        <p style="line-height: 27px; font-size: 11pt" align="justify">El Complejo cuenta con un grupo de tres escenarios que pueden ser vistos desde sus graderías para capacidad de 1500 personas; una piscina de clavados de cinco metros de profundidad, otra olímpica de 25 por 50 metros y una última de entrenamiento (semiolímpica) con la mitad del área, además de estos existe una piscina para niños.</p><br>
+                        <div class="stage">
+                            <div id="SLDR-ONE" class="sldr">
+                                <ul class="wrp animate">
+                                    <li class="elmnt-one">
                                         <div class="wrap"><img src="public/Img/curso4.jpg"  height="400">
-
-                                        </div>                                   
-                                </li>
-
-                               <li class="elmnt-two">
-                                    
+                                        </div>
+                                    </li>
+                                    <li class="elmnt-two">
+                                        
                                         <div class="wrap"><img src="public/Img/curso3.jpg"  height="400">
-
-                                        </div>                                 
-                                </li>
-
-                                 <li class="elmnt-three">
-                                    
+                                        </div>
+                                    </li>
+                                    <li class="elmnt-three">
+                                        
                                         <div class="wrap"><img src="public/Img/curso2.jpg"  height="400">
-
-                                        </div>                                 
-                                </li>
-                                 
-
-                            </ul>
-
-                        </div>
-
-                        <div class="clear"></div>
-
-                        <ul class="selectors">
-
-                            <li class="focalPoint"><a href="">•</a></li>
-
-                            <li><a href="">•</a></li>
-
-                            <li><a href="">•</a></li>            
-                         
-                        </ul>
-
-                    </div>
-
-                    <script src="public/Js/jquery.sldr.js"></script>
-                    <div class="freebirdFormviewerViewHeaderDescription" dir="auto">
-
-                      <p style="font-size: 11pt" align="justify">Fecha Inicio Ciclo 4-2017: <strong>22 de julio</strong></font></p>
-                      <p style="font-size: 11pt" align="justify">Fecha Finalización ciclo 4-2017:<strong> 20 de agosto</strong></font></p>
-                        <br>
-
-                        <p style="line-height: 27px; font-size: 11pt" align="justify">Este Primer momento o tramite  se realiza a través de este medio electrónico, para el segundo momento o Formalización de la Inscripción debe dirigirse a la oficina de coordinación del Complejo Acuático Simón Bolivar, los días 20, 21 o 22 de junio de 2017 en los horario de 8:00 a.m a 12:00 m. y de 2:00 a 3:00 p.m., con el objeto de entregar los documentos solicitados por el IDRD y de esta manera Formalizar su Inscripción. <strong>si NO realiza la entrega de documentos y consignación o pago </strong> se anulara la Pre-Inscripción y deberá realizarla nuevamente para el siguiente ciclo.</p>
-                        <br>
-                        <p style="line-height: 27px; font-size: 11pt" align="justify"><strong>IMPORTANTE:</strong> Tenga en cuenta que solo debe realizar el pago (consignación) del curso cuando esta Pre-inscripción sea aceptada <strong>(el sistema automáticamente le informa de la Aceptación de la Pre-inscripción al finalizar este proceso)</strong> y  solo debe inscribir al alumno nuevo una sola y única vez, durante el proceso de cada ciclo, con el objeto de evitar duplicidad en la información y de esta forma excluir de un cupo a otro usuario interesado. </p>
-
-
-                        <br>
-
-                        <font size="4"><center><table width="1000">
-
-                            <col width="281">
-
-                                <col width="282">
-
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#ffffff" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Punto de encuentro</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#ffffff" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Torre del Reloj parque Nacional</p>
-
-                                        </td>
-
-                                    </tr>
-                              
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#deeaf6" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Fecha</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#deeaf6" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Domingo 16 de julio de 2017</p>
-
-                                        </td>
-
-                                    </tr>
-
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#ffffff" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Hora de encuentro</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#ffffff" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>8:00 a.m</p>
-
-                                        </td>
-
-                                    </tr>
-
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#deeaf6" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Cupo Máximo</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#deeaf6" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>40 Personsa</p>
-
-                                        </td>
-
-                                    </tr>
-
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#ffffff" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Rango de Edad</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#ffffff" style="border: 1px solid #5b9bd5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>12 - 60 años</p>
-
-                                        </td>
-
-                                    </tr>
-
-
-
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#deeaf6" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Altitud</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#deeaf6" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Hasta 3.200  m.s.n.m</td>
-
-                                    </tr>
-
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#ffffff" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Temperatura</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#ffffff" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>14°</p>
-
-                                        </td>
-
-                                    </tr>
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#deeaf6" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Nivel</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#deeaf6" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p> Medio</p>
-
-                                        </td>
-
-                                    </tr>
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#ffffff" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Tiempo de recorrido</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#ffffff" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>5 horas</p>
-
-                                        </td>
-
-                                    </tr>
-                                    <tr valign="top">
-
-                                        <td width="281" bgcolor="#deeaf6" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Acceso </p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#deeaf6" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Por la Cra. 7° y Cra. 5 con calles 39 y 36.</p>
-
-                                        </td>
-
-                                    </tr>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="clear"></div>
+                            <ul class="selectors">
+                                <li class="focalPoint"><a href="">•</a></li>
+                                <li><a href="">•</a></li>
+                                <li><a href="">•</a></li>
                                 
-                                         <tr valign="top">
-
-                                        <td width="281" bgcolor="#ffffff" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            <p>Al finalizar</p>
-
-                                        </td>
-
-                                        <td width="282" bgcolor="#ffffff" style="border: 1px solid #9cc2e5; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.16cm; padding-right: 0.19cm">
-
-                                            El recorrido termina en mismo punto del la torre del reloj del parque nacional. 
-
-                                        </td>
-
-                                    </tr>
-                                     
-                                     
-
-                        </table></center></font>
-
-                        <h4>Recomendaciones</h4>
-
-                        
-<p style="line-height: 22px; font-size: 11pt;color:#1995dc" align="justify">"Recuerde que el horario seleccionado por usted <strong>NO PODRA SER MODIFICADO,</strong> teniendo en cuenta la programación establecida por el IDRD y la cantidad de cupos habilitados por horario, ya que estos son limitados con el fin de ofrecer un buen servicio en el desarrollo técnico de la escuela deportiva."</p>
-<br>
-<p style="line-height: 27px; font-size: 11pt" align="justify"><strong>"ACEPTO TÉRMINOS Y CONDICIONES DE LA ESCUELA DE NATACIÓN DEL COMPLEJO ACUÁTICO SIMÓN BOLÍVAR - IDRD"</strong> </p>
-<br>
-<p style="line-height: 20px; font-size: 11pt" align="justify"><strong>* todos los campos son obligatorios y Recuerde que al Finalizar este proceso y ENVIAR LOS DATOS DE INSCRIPCIÓN el sistema le informa automáticamente si su pre-inscripción fue aceptada</strong> </p>
+                            </ul>
+                        </div>
+                        <script src="public/Js/jquery.sldr.js"></script>
+                        <div class="freebirdFormviewerViewHeaderDescription" dir="auto">
+                            
+                            <h4>Comunicados</h4>
                             <br>
-
-                        </ul> <a class="btn btn-info" href="registro">Registrarse</a></div>
-
+                            <p style="line-height: 22px; font-size: 11pt;" align="justify"><strong>Nadadores Antiguos:</strong>Los nadadores antiguos deberán hacer su Inscripción en los tiempos definidos por la Escuela, el cual es el último fin de semana del ciclo que está cursando.</p>
+                  
+                            <p style="line-height: 22px; font-size: 11pt;" align="justify"><strong>Nadadores Nuevos:</strong>Los nadadores nuevos deberán realizar su preinscripción en los tiempos definidos por la escuela, de acuerdo con la información y comunicado que será emitido, en la página web del IDRD y en la oficina de Coordinación de la Escuela de Natación del complejo acuático.</p>
+                      
+                            <p style="line-height: 27px; font-size: 11pt" align="justify">Requisitos para la inscripción de <strong>nadadores nuevos:</strong> Los siguientes son los requisitos exigidos por la Escuela de Natación IDRD, para formalizar la inscripción de los nadadores en el proceso pedagógico y educativo:</p>
+                             <ol>
+                                <li style="line-height: 27px; font-size: 11pt" align="justify">Atender oportunamente los procesos de preinscripción (primer momento) de niños(as) nuevos al programa.</li>
+                                <li style="line-height: 27px; font-size: 11pt" align="justify">Asistir en la fecha indicada con el fin de formalizar la inscripción (segundo momento) de los nadadores al programa; allí deberá presentar y entregar en medio físico:<br>
+                                <strong>A. </strong> Examen de aptitud física (Certificado Medico) emitido por médico de profesión, que constate que el niño/a se  encuentra  sin  ninguna  restricción  médica  para  la  realización  de  la  práctica deportiva.<br>
+                                <strong>B.</strong>  Certificado de Afiliación a la EPS del niño.<br>
+                                <strong>C.</strong>  Soporte de pago de inscripción en “Original” al programa de la Escuela de Natación IDRD Complejo Acuático Simón Bolívar, precios según lo contemplado por el IDRD para cada año respectivamente.<br>
+                                <strong>D.</strong>  Fotocopia del carné estudiantil.<br>
+                                <strong>E.</strong>  Fotocopia del Documento de identificación.
+                                </li>
+                            </ol>
+                            <br>
+                            <p style="line-height: 20px; font-size: 11pt" align="justify"><strong>NOTA:</strong>: La preinscripción no permite cambios de horario, por disponibilidad de niveles y cupos. Cuando un alumno Nuevo ya es aceptado en la Escuela y realiza el proceso completo de Inscripción cambia su estado a <strong>“Alumno Antiguo”,</strong> para los siguientes ciclos debe realizar el procedimiento de Inscripción según este estado. </p>
+                            <br>
+                            </ul><center><a class="btn btn-info" href="recomendaciones" style="font-size: 11pt">Reglamento y Requisitos
+                            </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-info" href="registro" style="font-size: 11pt">Registrar Niños de 5 a 7 años</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-info" href="form2" style="font-size: 11pt">Registrar Niños de 8 a 12 años</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-info" href="descarga" style="font-size: 11pt">Descargar formato de pre-inscripción</a></center></div>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-
-        </div>
-
-</section>
-
-@stop
+            </section>
+            @stop
