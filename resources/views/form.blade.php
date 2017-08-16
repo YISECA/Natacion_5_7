@@ -167,7 +167,7 @@
       <div class="freebirdFormviewerViewItemsItemItemheader">
          <div class="freebirdFormviewerViewItemsItemItemTitleContainer">
             <div class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" id="i1" role="heading" aria-level="2" aria-describedby="i.desc.131124881">Términos de inscripción <span class="freebirdFormviewerViewItemsItemRequiredAsterisk" aria-hidden="true">*</span><br><br><br><br><br></div>
-            <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.131124881" dir="auto">He leído el reglamento y  los requisitos  y acepto términos y condiciones y de la ESCUELA DE NATACIÓN DEL COMPLEJO ACUÁTICO SIMÓN BOLÍVAR - IDRD </div>
+            <div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.131124881" dir="auto">He leído el reglamento y los requisitos por lo tanto acepto términos y condiciones de la ESCUELA DE NATACIÓN DEL COMPLEJO ACUÁTICO SIMÓN BOLÍVAR - IDRD </div>
          </div>
       </div>
       <div jsname="JNdkSc" role="group" aria-labelledby="i1" aria-describedby="i.desc.131124881 i.err.131124881 i.req.131124881" class="">

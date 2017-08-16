@@ -100,7 +100,7 @@ function isValidDate(day,month,year)
 
 $('#fecha_nacimiento').datepicker
 ({
-	    maxDate: '2012-07-06',
+	    maxDate: '2012-08-26',
 		dateFormat: 'yy-mm-dd',
 		changeMonth: true,
 		changeYear: true,

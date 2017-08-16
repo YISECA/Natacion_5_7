@@ -100,12 +100,11 @@ function isValidDate(day,month,year)
 
 $('#fecha_nacimiento').datepicker
 ({
-	    maxDate: '2005-07-06',
-		dateFormat: 'yy-mm-dd',
-		changeMonth: true,
-		changeYear: true,
-		yearRange: "-12:-8"});
-
+        maxDate: '2009-08-26',
+        dateFormat: 'yy-mm-dd',
+        changeMonth: true,
+        changeYear: true,
+        yearRange: "-12:-8"});
 /*$('#fecha_nacimiento').datepicker({
 
       minDate: new Date(1900,1-1,1), maxDate: '1999-08-06',

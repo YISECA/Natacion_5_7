@@ -114,12 +114,8 @@ img{
 </table> </center>
     
 
-    <p align="justify" style="font-size: 7pt"><br><br>
-        <strong>Recuerde que para formalizar la inscripción deberá dirigirse a la coordinación de la escuela de natación CASB - IDRD y radicar la documentación exigida.</strong>
-      </p>
-
-      <p align="justify" style="font-size: 6pt">
-        Cualquier inquietud acércate a las Instalaciones del IDRD Calle 63 No 59a-06 Área de Recreación, o llama al teléfono 6605400 Ext. 2007 y 3002.
+      <p align="justify" style="font-size: 7pt"><br><br>
+        <strong>Recuerde que para formalizar la inscripción deberá dirigirse a la Coordinación de la Escuela de Natación CASB - IDRD  dirección Calle 63 No 45-00 y radicar la documentación exigida.</strong>
       </p>
   
     </body>

@@ -165,14 +165,14 @@ public function insertar(Request $request)
         
         Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
         {
-            $m->from('no-reply@idrd.gov.co', 'Preinscripción aceptada al curso de natación en el complejo acuático Simón Bolivar ');
-            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Preinscripción aceptada al curso de natación en el complejo acuático Simón Bolivar');
+            $m->from('no-reply@idrd.gov.co', 'Pre-inscripción aceptada al curso de natación en el complejo acuático Simón Bolivar ');
+            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Pre-inscripción aceptada al curso de natación en el complejo acuático Simón Bolivar');
         });
 
       }else{
         return view('error', ['error' => 'Lo sentimos ya NO hay cupos en este horario!']);
       }
-          return view('error', ['error' => 'SU PRE-INSCRIPCION FUE ACEPTADA Recuerde Imprimir el comprobante de Pre-Inscripción (Descargar Formato de Pre-Inscripción) y Formalizar la Inscripción (entrega de pago y documentos) del niño o niña en la Coordinación de la Escuela del CASB-IDRD el 20, 21 o 22 de junio']);
+          return view('error', ['error' => 'SU PRE-INSCRIPCIÓN FUE ACEPTADA Recuerde Imprimir el comprobante de Pre-Inscripción (Descargar Formato de Pre-Inscripción) y Formalizar la Inscripción (entrega de pago y documentos) del niño o niña en la Coordinación de la Escuela del CASB-IDRD el 20, 21 o 22 de junio']);
     }
 
 
