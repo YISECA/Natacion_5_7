@@ -35,7 +35,8 @@
           <link rel="stylesheet" href="{{ asset('public/Css/sticky-footer.css') }}" media="screen"> 
 
           <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.2.1/css/buttons.dataTables.min.css">   
-
+     
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">  
       @show
 
 
@@ -58,9 +59,18 @@
 
           <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
+          <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script> 
+
           <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 
+        
+          <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
           <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js"></script>
+
+          <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+          <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.4.2/js/dataTables.buttons.min.js"></script>
 
           <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
 
@@ -70,15 +80,23 @@
 
           <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.2.1/js/buttons.html5.min.js"></script>
 
+          <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+          <script type="text/javascript" language="javascript" src="//cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+
+          <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.html5.min.js"></script>
+
+          <script type="text/javascript" language="javascript" src="//cdn.datatables.net/buttons/1.4.2/js/buttons.colVis.min.js"></script>
+
+
           <link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
 
+          <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+
+          <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.4.2/css/buttons.dataTables.min.css">
+
+
           
-
-    
-
-        
-
-
 
             @show
 
@@ -124,9 +142,13 @@
 
               <li><a href="recomendaciones" id="a-registro">Reglamento y Requisitos</a></li>
 
-              <!--<li><a href="registro" id="a-registro">Registrarse</a></li>-->
+              <!--<li><a href="registro" id="a-registro">Registrarse</a></li>
 
-              <li><a href="descarga" id="a-descarga">Descargar Formato de Pre-Inscripción</a></li>
+              <li><a href="descarga" id="a-descarga">Descargar Formato de Pre-Inscripción</a></li>-->
+
+              <li><a href="programacion" id="a-descarga">Programación</a></li>
+
+              <li><a href="busqueda" id="a-descarga">Pre-Inscripción Alumnos Antiguos</a></li>
 
               <!--<li><a href="login" id="a-login" >Iniciar sesion</a></li>-->
 
@@ -172,7 +194,7 @@
 
                 <h1><font size="5" face="Comic Sans MS,arial,verdana">BIENVENIDOS</font></h1>
 
-                <center<p class="lead"><h1><font size="4" face="Comic Sans MS,arial,verdana">ESCUELA DEPORTIVA DE NATACIÓN COMPLEJO ACUÁTICO SIMÓN BOLIVAR – IDRD 2017</font></h1></p>
+                <center<p class="lead"><h1><font size="4" face="Comic Sans MS,arial,verdana">ESCUELA DEPORTIVA DE NATACIÓN COMPLEJO ACUÁTICO SIMÓN BOLIVAR – IDRD</font></h1></p>
 
               </div>
 
@@ -207,7 +229,21 @@
           @yield('content')
 
       </div>        
-
+      <script type="text/javascript">
+        $(function(){
+          $('select').each(function(i, e){
+            if ($(this).attr('data-value'))
+            {
+              if ($.trim($(this).data('value')) !== '')
+              {
+                var dato = $(this).data('value');
+                $(this).val(dato);
+              }
+            }
+            $(this).trigger('change');
+          });
+        })
+      </script>
       <!-- FIN Contenedor panel principal -->
 
   </body>

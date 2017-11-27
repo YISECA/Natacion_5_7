@@ -1,4 +1,4 @@
-@extends('master')
+   @extends('master')
 
 @section('content')
 
@@ -12,24 +12,25 @@
 
 <div class="panel panel-default">
 
-   <form method="POST" action="insertar" id="form_gen" enctype="multipart/form-data">
-
+   <form method="POST" action="modificar" id="form_gen" enctype="multipart/form-data">
+  <input required type="hidden" class="form-control" id="id" name="id" value="{{$formulario->id}}">
       <div class="panel-body">
 
-         <p align="center" style="font-size: 20px">FORMULARIO DE PRE-INSCRIPCIÓN NIÑOS DE 8 A 12 AÑOS</p>
+         <p align="center" style="font-size: 20px">FORMULARIO DE ACTUALIZACIÓN Y PRE-INSCRIPCIÓN ALUMNOS ANTIGUOS</p>
 
          
 
-         <p align="center"><font size="3"color="#1995dc">Pre-Inscripciones el día 19 de Septiembre desde las 10.00 a.m. o    hasta agotar cupos disponibles </font></p><br>
+         <p align="center"><font size="3"color="#1995dc">Pre-Inscripciones desde el día 27 de Noviembre desde las 2.00 p.m. hasta el 11 de Diciembre a las 5:00 p.m</font></p><br>
 
-         <p style="line-height: 27px; font-size: 11pt" align="justify">Este Primer momento o tramite  se realiza a través de este medio electrónico, para el segundo momento o Formalización de la Inscripción debe dirigirse a la oficina de coordinación del Complejo Acuático Simón Bolivar, los días 19 y 20 de septiembre de 2017 en los horario de 8:00 a.m a 12:00 m. y de 2:00 a 5:00 p.m., con el objeto de entregar los documentos solicitados por el IDRD y de esta manera Formalizar su Inscripción. <strong>si NO realiza la entrega de documentos y consignación o pago </strong> se anulara la Pre-Inscripción y deberá realizarla nuevamente para el siguiente ciclo.</p><br>
+         <p style="line-height: 27px; font-size: 11pt" align="justify">Este Primer momento o tramite se realiza a través de este medio electrónico, para el segundo momento o Formalización de la Inscripción (entrega de pago y documentos actualizados) debe dirigirse a la oficina de coordinación del Complejo Acuático Simón Bolivar, la fecha para ésto en el año 2018  se informara por este medio y se publicara en la pagina, si no cumple con los tiempos aquí mencionados se perdera el cupo adquirido en la Escuela. <strong>si NO realiza la entrega de documentos y consignación o pago en las fechas que se programen </strong> se anulara la Pre-Inscripción y deberá realizarla nuevamente como Alumno Nuevo en las fechas programadas para ellos.</p><br>
 
-         <p style="line-height: 27px; font-size: 11pt" align="justify"><strong>IMPORTANTE:</strong> Tenga en cuenta que solo debe realizar el pago (consignación) del curso cuando esta Pre-inscripción sea aceptada <strong>(el sistema automáticamente le informa de la Aceptación de la Pre-inscripción al finalizar este proceso)</strong> y  solo debe inscribir al alumno nuevo una sola y única vez, durante el proceso de cada ciclo, con el objeto de evitar duplicidad en la información y de esta forma excluir de un cupo a otro usuario interesado. </p>
+         <p style="line-height: 27px; font-size: 11pt" align="justify"><strong>IMPORTANTE:</strong> Tenga en cuenta que solo debe realizar el pago (consignación) del curso cuando sean informadas las fechas para el segundo momento <strong>(el sistema automáticamente le informa de la Aceptación y actualización de la Pre-inscripción al finalizar este proceso)</strong> solo debe realizar esta etapa una sola y única vez, durante el proceso del primer ciclo, con el objeto de evitar duplicidad en la información y de esta forma excluir de un cupo a otro usuario interesado. </p>
 
+        <p style="line-height: 27px; font-size: 11pt" align="justify"><strong>Nota:</strong> A continuación usted podrá consultar los datos del niño(a) y del acudiente que sean necesarios de modificación o actualización.</p> 
          
 
          <br>
-
+ 
          <!-- nuevo formulario-->
 
          <div class="panel panel-default">
@@ -44,7 +45,7 @@
 
                      <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Nombre Completo </label>
 
-                     <input required type="text" class="form-control" id="nombre_acudiente" name="nombre_acudiente" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                     <input required type="text" class="form-control" id="nombre_acudiente" name="nombre_acudiente" onkeyup="javascript:this.value=this.value.toUpperCase();"  value="{{$formulario->nombre_acudiente}}">
 
                   </div>
 
@@ -54,7 +55,7 @@
 
                      <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Documento de Identidad </label>
 
-                     <input title="Se necesita una cedula" required type="number" class="form-control" id="cedula_acudiente" name="cedula_acudiente"><br>
+                     <input title="Se necesita una cedula" required type="number" class="form-control" id="cedula_acudiente" name="cedula_acudiente" value="{{$formulario->cedula_acudiente}}"><br>
 
                   </div>
 
@@ -64,13 +65,13 @@
 
                      <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Ocupación </label>
 
-                     <input required type="text" class="form-control" id="ocupacion" name="ocupacion" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+                     <input required type="text" class="form-control" id="ocupacion" name="ocupacion" onkeyup="javascript:this.value=this.value.toUpperCase();" value="{{$formulario->ocupacion}}" >
 
                   </div>
 
                   <div class="col-xs-6"><label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Correo Electrónico</label>
 
-                  <input required type="mail" class="form-control" id="mail" name="mail" ><br>
+                  <input required type="mail" class="form-control" id="mail" name="mail" value="{{$formulario->mail}}"><br>
 
                </div>
 
@@ -80,13 +81,13 @@
 
                   <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Dirección de residencia </label>
 
-                  <input required type="text" class="form-control" id="direccion" name="direccion" >
+                  <input required type="text" class="form-control" id="direccion" name="direccion" value="{{$formulario->direccion}}">
 
                </div>
 
                <div class="col-xs-6"><label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Teléfono </label>
 
-               <input required type="number" class="form-control" id="telefono" name="telefono" ><br>
+               <input required type="number" class="form-control" id="telefono" name="telefono" value="{{$formulario->telefono}}"><br>
 
             </div>
 
@@ -98,7 +99,7 @@
 
             <div class="col-xs-6">
 
-               <select  required name="localidad" id="localidad" class="form-control" >
+               <select  required name="localidad" id="localidad" class="form-control" data-value="{{$formulario->localidad}}" >
 
                   <option value="">Seleccione</option>
 
@@ -109,6 +110,7 @@
                   @endforeach
 
                </select>
+
 
             </div>
 
@@ -136,7 +138,7 @@
 
                <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Nombres Completos </label>
 
-               <input required type="text" class="form-control" id="nombre_nino" name="nombre_nino" onkeyup="javascript:this.value=this.value.toUpperCase();">
+               <input required type="text" class="form-control" id="nombre_nino" name="nombre_nino" onkeyup="javascript:this.value=this.value.toUpperCase();" value="{{$formulario->nombre_nino}}">
 
             </div>
 
@@ -144,7 +146,7 @@
 
                <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Apellidos Completos</label>
 
-               <input required type="text" class="form-control" id="apellido_nino" name="apellido_nino" onkeyup="javascript:this.value=this.value.toUpperCase();" ><br>
+               <input required type="text" class="form-control" id="apellido_nino" name="apellido_nino" onkeyup="javascript:this.value=this.value.toUpperCase();" value="{{$formulario->apellido_nino}}"><br>
 
             </div>
 
@@ -154,13 +156,13 @@
 
                <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Documento de Identificación </label>
 
-               <input required type="text" class="form-control" id="cedula" name="cedula">
+               <input required type="text" class="form-control" id="cedula" name="cedula" value="{{$formulario->cedula}}" readonly="readonly">
 
             </div>
 
             <div class="col-xs-6"><label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Género</label>
 
-            <select name="genero" id="genero" class="form-control" >
+            <select name="genero" id="genero" class="form-control" data-value="{{$formulario->genero}}">
 
                <option value="">Seleccione</option>
 
@@ -176,7 +178,7 @@
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Fecha de nacimiento </label>
 
-            <input required type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+            <input required type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" value="{{$formulario->fecha_nacimiento}}">
 
          </div>
 
@@ -184,7 +186,7 @@
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Edad cumplida</label>
 
-            <input required type="text" class="form-control" id="edad" name="edad"><br>
+            <input required type="text" class="form-control" id="edad" name="edad" value="{{$formulario->edad}}"><br>
 
          </div>
 
@@ -194,7 +196,7 @@
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Dirección de residencia </label>
 
-            <input required type="text" class="form-control" id="direccion_nino" name="direccion_nino" >
+            <input required type="text" class="form-control" id="direccion_nino" name="direccion_nino" value="{{$formulario->direccion_nino}}   " >
 
          </div>
 
@@ -202,7 +204,7 @@
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Teléfono residencia </label>
 
-            <input required type="number" class="form-control" id="telefono_nino" name="telefono_nino" ><br>
+            <input required type="number" class="form-control" id="telefono_nino" name="telefono_nino" value="{{$formulario->telefono_nino}}" ><br>
 
          </div>
 
@@ -212,7 +214,7 @@
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">EPS </label>
 
-            <input required type="text" class="form-control" id="eps" name="eps" onkeyup="javascript:this.value=this.value.toUpperCase();" >
+            <input required type="text" class="form-control" id="eps" name="eps" onkeyup="javascript:this.value=this.value.toUpperCase();" value="{{$formulario->eps}}">
 
          </div>
 
@@ -220,7 +222,7 @@
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Institución Educativa</label>
 
-            <input required type="text" class="form-control" id="institucion" name="institucion" onkeyup="javascript:this.value=this.value.toUpperCase();" ><br>
+            <input required type="text" class="form-control" id="institucion" name="institucion" onkeyup="javascript:this.value=this.value.toUpperCase();"  value="{{$formulario->institucion}}"><br>
 
          </div>
 
@@ -230,7 +232,7 @@
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Sector del colegio </label>
 
-            <select name="sector_colegio" id="sector_colegio" class="form-control" >
+            <select name="sector_colegio" id="sector_colegio" class="form-control" data-value="{{$formulario->sector_colegio}}">
 
                <option value="">Seleccione</option>
 
@@ -245,34 +247,15 @@
          <div class="col-xs-6">
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput"><font color="#1995dc"><u>HORARIO DEL CURSO</u> </font></label>
-
-            <select  required name="horario" id="horario" class="form-control" >
-
-               <option value="">Seleccione</option>
-
-               @foreach ($horarioss as $horarios)
-
-               <option value="{{ $horarios->id_horarios }}">{{ $horarios->horarios}}</option>
-
-               @endforeach
-
-            </select><br>
-
+            <input required type="hidden" class="form-control" id="horario" name="horario" value="{{$formulario->horario}}" readonly="readonly">
+             <input required type="text" class="form-control" id="" name="" value="{{$formulario->horarioss->horarios}}" readonly="readonly"><br>
          </div>
 
          <div class="col-xs-6">
 
             <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Ha tomado clases o cursos de Natación</label>
 
-            <select name="curso" id="curso" class="form-control" >
-
-               <option value="">Seleccione</option>
-
-               <option value="SI">SI</option>
-
-               <option value="NO">NO</option>
-
-            </select>
+           <input required type="text" class="form-control" id="curso" name="curso" value="{{$formulario->curso}}" readonly="readonly">
 
             <br>
 
@@ -286,13 +269,13 @@
 
          
 
-         <div class="col-xs-6"><label > si selecciona <font color="#1995dc" size="3">SI</font> se realizará evaluación de Habilidades en el agua, y se ubicara en el mismo horario u otro disponible según resultado y cupos para el nivel evaluado</label></div>
+         <!--<div class="col-xs-6"><label > si selecciona <font color="#1995dc" size="3">SI</font> se realizará evaluación de Habilidades en el agua, y se ubicara en el mismo horario u otro disponible según resultado y cupos para el nivel evaluado</label></div>-->
 
       </div>
 
       <!-- ciclo del curso-->
 
-      <div class="col-xs-6"><input type="hidden" name="ciclo" id="ciclo" value="6"></div>
+      <div class="col-xs-6"><input type="hidden" name="ciclo" id="ciclo" value="1-2018"></div>
 
    </div>
 
@@ -300,11 +283,9 @@
 
 <br>
 
-<p style="line-height: 22px; font-size: 11pt;color:#1995dc" align="justify">"Recuerde que el horario seleccionado por usted <strong>NO PODRA SER MODIFICADO,</strong> teniendo en cuenta la programación establecida por el IDRD y la cantidad de cupos habilitados por horario, ya que estos son limitados con el fin de ofrecer un buen servicio en el desarrollo técnico de la escuela deportiva."</p>
+<p style="line-height: 22px; font-size: 11pt;color:#1995dc" align="justify">* Recuerde que el horario <strong>NO PUEDE SER MODIFICADO,</strong> teniendo en cuenta la programación establecida por el IDRD y la cantidad de cupos habilitados por horario, ya que estos son limitados con el fin de ofrecer un buen servicio en el desarrollo técnico de la escuela deportiva.</p>
 
-<br>
-
-<p style="line-height: 20px; font-size: 11pt; color:#1995dc"" align="justify"><strong>* todos los campos son obligatorios y Recuerde que al Finalizar este proceso y ENVIAR LOS DATOS DE INSCRIPCIÓN el sistema le informa automáticamente si su pre-inscripción fue aceptada</strong> </p>
+<p style="line-height: 20px; font-size: 11pt; color:#1995dc"" align="justify">Todos los campos son obligatorios y Recuerde que al Finalizar este proceso y ENVIAR LOS DATOS DE INSCRIPCIÓN el sistema le informa automáticamente si su pre-inscripción fue actualizada.</strong> </p>
 
 </fieldset>
 

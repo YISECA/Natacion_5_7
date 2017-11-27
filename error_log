@@ -1,0 +1,10 @@
+[25-Aug-2017 20:25:58 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Alert' not found in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_5_7/app/Http/Controllers/FormController.php on line 176
+[30-Aug-2017 15:56:20 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_5_7/app/Http/Controllers/FormController.php on line 145
+[05-Oct-2017 15:13:14 UTC] PHP Parse error:  syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_CASB/app/Http/Controllers/FormController.php on line 143
+[05-Oct-2017 15:43:07 UTC] PHP Parse error:  syntax error, unexpected '{' in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_CASB/app/Http/Controllers/FormController.php on line 144
+[05-Oct-2017 15:43:50 UTC] PHP Parse error:  syntax error, unexpected '{' in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_CASB/app/Http/Controllers/FormController.php on line 144
+[05-Oct-2017 15:43:56 UTC] PHP Parse error:  syntax error, unexpected '{' in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_CASB/app/Http/Controllers/FormController.php on line 144
+[06-Oct-2017 16:02:12 UTC] PHP Parse error:  syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_CASB/app/Http/Controllers/FormController.php on line 142
+[06-Oct-2017 16:02:53 UTC] PHP Parse error:  syntax error, unexpected 'href' (T_STRING) in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_CASB/app/Http/Controllers/FormController.php on line 142
+[06-Oct-2017 20:38:26 UTC] PHP Parse error:  syntax error, unexpected '<', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_CASB/app/Http/Controllers/FormController.php on line 141
+[06-Oct-2017 20:41:49 UTC] PHP Parse error:  syntax error, unexpected ''</td>'' (T_CONSTANT_ENCAPSED_STRING) in /home1/idrdgov/public_html/SIM/FORMULARIOS/Natacion_CASB/app/Http/Controllers/FormController.php on line 143

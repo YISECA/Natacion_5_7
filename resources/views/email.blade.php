@@ -21,7 +21,8 @@ img{
 
       <p align="center" style="font-size: 9pt;"><strong>ESCUELA DEPORTIVA DE NATACIÓN COMPLEJO ACUÁTICO SIMÓN BOLIVAR – IDRD 2017</strong></p>
       <p align="center" style="font-size: 7pt;"><strong>PRE-INSCRIPCIÓN CURSOS DE NATACIÓN ALUMNOS NUEVOS</strong></p>
-      <p align="center" style="font-size: 7pt;"><strong>RANGO DE EDAD DE 5 A 7 AÑOS</strong></p>
+     
+
 <br>
 <center><table border="0" width="100%" style="font-size: 7pt;">
  <tr>
